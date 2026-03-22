@@ -1,24 +1,24 @@
-# 📦 Envanter ve Sipariş Takip Sistemi (Inventory & Order Management)
+#  Envanter ve Sipariş Takip Sistemi (Inventory & Order Management)
 
 Bu proje, bir e-ticaret sitesinin veya fiziksel bir mağazanın stoklarını, ürün fiyatlandırmalarını ve müşteri siparişlerini yönetebilmesi için geliştirilmis, iliskisel veritabanı  tabanlı bir otomasyon sistemidir. 
 
 Sistem, **MICROSOFT SQL Server** üzerinde çalışan sağlam bir veritabanı mimarisi ile **Java (JDBC)** kullanılarak geliştirilmiş etkileşimli bir backend uygulamasından oluşmaktadır.
 
-## 🚀 Öne Çıkan Teknik Özellikler
+##  Öne Çıkan Teknik Özellikler
 
 * **Veri Bütünlüğü (Data Integrity):** Veritabanı seviyesinde uygulanan `CHECK` kısıtlamaları sayesinde, stok miktarının sıfırın altına düşmesi veya geçersiz işlemler yapılması engellenmiştir. Java uygulaması bu kısıtlamaları Exception Handling ile yakalayarak kullanıcıya anlık geri bildirim verir.
 * **Otomatik Denetim (Audit Logging):** Ürün fiyatlarında veya stoklarında bir değişiklik olduğunda, SQL Server üzerinde yazılan `AFTER UPDATE` Trigger'ı devreye girer ve güncelleme tarihini otomatik olarak sisteme kaydeder.
 * **Performans Optimizasyonu (Batch Processing):** Sistemin ölçeklenebilirliğini test etmek amacıyla **Datafaker** kütüphanesi entegre edilmiştir. 1.000'den fazla sentetik ürün verisi, ağ trafiğini yormamak adına JDBC Batch Processing kullanılarak paketler halinde veritabanına aktarılmıştır.
 * **Normalizasyon:** Veri tekrarını önlemek için Siparişler ve Sipariş Detayları 1'e N (One-to-Many) ilişkisi kurularak ayrı tablolara bölünmüştür.
 
-## 🛠️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 * **Backend:** Java (JDK 8+), JDBC
 * **Veritabanı:** Microsoft SQL Server, T-SQL (Triggers, Constraints, Keys)
 * **Bağımlılık Yönetimi:** Maven
 * **Test & Mock Data:** Datafaker (`net.datafaker`)
 
-## 🗄️ Veritabanı Mimarisi
+##  Veritabanı Mimarisi
 
 Sistem 3 temel tablodan oluşmaktadır:
 
