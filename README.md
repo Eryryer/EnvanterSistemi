@@ -26,7 +26,7 @@ Sistem 3 temel tablodan oluşmaktadır:
 2. **SIPARISLER:** Müşteri siparişlerinin üst bilgilerini (Tarih, Toplam Tutar, Durum) barındırır.
 3. **SIPARISDETAY:** Hangi siparişte hangi üründen kaç adet alındığı bilgisini Foreign Key (Yabancı Anahtar) ilişkileriyle bağlayarak tutar.
 
-## 💻 Kurulum ve Kullanım
+##  Kurulum ve Kullanım
 
 1. Repoyu bilgisayarınıza klonlayın:
    ```bash
